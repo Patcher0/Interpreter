@@ -6,11 +6,11 @@ import cn.klee.interpreter.Op;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StringInterpreter extends Interpreter<String,StringBuilder, Map<String,String>> {
+public class BasicSplitInterpreter extends Interpreter<String,StringBuilder, Map<String,String>> {
     int index = 0;
     String key = "EMPTY";
     Map<String,String> mappedString = new HashMap<>();
-    public StringInterpreter(String value) {
+    public BasicSplitInterpreter(String value) {
         super(value);
         this.processing = new StringBuilder();
         this.putOp("entry",(strInt) -> {
